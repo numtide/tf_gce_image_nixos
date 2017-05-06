@@ -9,8 +9,9 @@ https://github.com/NixOS/nixops/commit/c28a4f7acedbc1b3b8446f3713f219109da19134
 
 ## Module Input Variables
 
-* `release` - (Optional) The image release. This should generally be untouched.
-* `project` - (Optional) The project in which the resource belongs. If it is not provided, the provider project is used.
+* `release` - (Optional) The NixOS release series to use. Valid values: "16.03", "17.03".
+* `release_map` - (Optional) A map from release series to actual releases.
+* `project` - (Optional) The (GCP) project in which the resource belongs. If it is not provided, the provider project is used.
 
 ## Outputs
 
@@ -21,6 +22,7 @@ https://github.com/NixOS/nixops/commit/c28a4f7acedbc1b3b8446f3713f219109da19134
 ```hcl
 module "nixos_image" {
   source = "github.com/numtide/tf_gce_image_nixos"
+  release = "17.03"
 }
 
 resource "google_compute_instance" "example" {
