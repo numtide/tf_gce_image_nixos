@@ -31,7 +31,9 @@ resource "google_compute_instance" "example" {
   zone         = "us-central1-a"
 
   disk {
-    image = "${module.nixos_image.self_link}"
+    initialize_params {
+      image = "${module.nixos_image.self_link}"
+    }
   }
 
   network_interface {
