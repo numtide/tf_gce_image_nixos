@@ -1,15 +1,17 @@
 variable "release" {
   type        = "string"
-  default     = "17.03"
+  default     = "18.03"
   description = "The NixOS release series to use"
 }
 
+# Imported from <nixpkgs/nixos/modules/virtualisation/gce-images.nix>
 variable "release_map" {
   type = "map"
 
   default = {
     "16.03" = "16.03.847.8688c17"
     "17.03" = "17.03.1082.4aab5c5798"
+    "18.03" = "18.03.132536.fdb5ba4cdf9"
   }
 
   description = "A map of release series to actual releases"
