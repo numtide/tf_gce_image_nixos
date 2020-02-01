@@ -1,5 +1,7 @@
 # tf_gce_image_nixos
 
+**STATUS: Deprecated**. See https://github.com/tweag/terraform-nixos/
+
 A terraform module to provide NixOS images on GCP.
 
 This module actually creates a new image in the project using a public tarball
